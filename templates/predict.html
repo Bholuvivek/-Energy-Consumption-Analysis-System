@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>predict</title>
+</head>
+
+<body>
+  
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <h3 class="logo">Brand<span>Name</span></h3>
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="{{url_for('contact')}}">Contact</a>
+                           
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="{{url_for('prediction')}}">Predict</a>
+                           </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="{{url_for('about')}}">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="#" class="btn transparent">Log in</a>
+                    <a href="#" class="btn solid">Sign up</a>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="overlay"></div>
+            <div class="login-box">
+                <p>Prediction</p>
+                <form action="{{url_for('prediction')}}" method="post">
+                  <div class="user-box">
+                    <input required="" name="GlobalReactivePower" id="GlobalReactivePower" type="text">
+                    <label>Global_reactive_power</label>
+                  </div>
+                  <div class="user-box">
+                    <input required="" name="Global_intensity" id="Global_intensity" type="text">
+                    <label>Global_Intensity</label>
+                  </div>
+                  <div class="user-box">
+                    <input required="" name="Sub_metering_1" id="Sub_metering_1" type="text">
+                    <label>Sub_Metering_1</label>
+                  </div>
+                  <div class="user-box">
+                    <input required="" name="Sub_metering_2" id="Sub_metering_2" type="text">
+                    <label>Sub_Metering_2</label>
+                  </div>
+                  <div class="user-box">
+                    <input required="" name="Sub_metering_3" id="Sub_metering_3" type="text">
+                    <label>Sub_Metering_3</label>
+                  </div>
+                  <div class="user-box">
+                  <input type="submit" value="predict">
+                  </div>
+                  <!-- <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                  </a>  -->
+                </form>
+                
+              </div>
+        </section>
+<!-- form details of data predictions -->
+
+       
+    </main>
+    
+</body>
+
+</html>
